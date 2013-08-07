@@ -1,0 +1,220 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nav-adjustments {
+    z-index: 10;
+    background: transparent;   
+}
+
+.window {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.window:nth-child(2) {
+    top: 0px;
+}
+.window:nth-child(3) {
+    top: 100%;
+}
+.window:nth-child(4) {
+    top: 200%;
+}
+.window:nth-child(5) {
+    top: 300%;
+}
+.window:nth-child(6) {
+    top: 400%;
+}
+.window:nth-child(7) {
+    top: 500%;
+}
+.window:nth-child(8) {
+    top: 600%;
+}
+.window:nth-child(9) {
+    top: 700%;
+}
+.window:nth-child(10) {
+    top: 800%;
+}
+.window:nth-child(11) {
+    top: 900%;
+}
+.window:nth-child(12) {
+    top: 1000%;
+}
+.window:nth-child(13) {
+    top: 1100%;
+}
+.window:nth-child(14) {
+    top: 1200%;
+}
+
+.header-text {
+    left: 45%;
+    top: 50%;
+    position: relative;
+    font-size: 50px;
+    color: white;  
+}
+
+.two-text {
+    left: 5%;
+    top: 5%;
+    position: relative;
+    font-size: 15px;
+    color: white;  
+    text-transform:lowercase;
+}
+
+.bg {
+    background: url(../img/large/landscape/background.jpg) no-repeat;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.one {
+    background: url(../img/large/landscape/one.jpg) no-repeat;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.two {
+    background: url(../img/large/landscape/two.jpg) no-repeat;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.three {
+    background: url(../img/large/landscape/three.jpg) no-repeat;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.four {
+    background: url(../img/large/landscape/four.jpg) no-repeat;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.five {
+    background: url(../img/large/landscape/five.jpg) no-repeat;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.ev-bg {
+    background: url(../img/large/landscape/everest/background.jpg) no-repeat;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.ev-one {
+    background: url(../img/large/landscape/everest/one.jpg) no-repeat;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.ev-two {
+    background: url(../img/large/landscape/everest/two.jpg) no-repeat;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.ev-three {
+    background: url(../img/large/landscape/everest/three.jpg) no-repeat;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.tlv-bg {
+    background: url(../img/large/landscape/tlv/background.jpg) no-repeat;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.tlv-one {
+    background: url(../img/large/landscape/tlv/one.jpg) no-repeat;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.tlv-two {
+    background: url(../img/large/landscape/tlv/two.jpg) no-repeat;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
