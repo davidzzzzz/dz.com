@@ -1,0 +1,137 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
+
+@tibetColor: #051f80;
+
+body {
+   font-family: 'Josefin Sans', sans-serif;
+}
+
+.nav-text {
+    color: white !important;
+    font-size: 14px;
+}
+
+.nav-adjustments {
+    z-index: 10;
+    background: transparent;   
+}
+
+.window {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+
+.footer {
+    height: 30px;
+    background-color: @tibetColor;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.my-name {
+    font-size: 17px;
+    color: white;    
+    float: left;
+}
+
+.footer-nav {
+    float: right;
+}
+
+.footer-nav ul {
+    list-style-type: none; 
+}
+
+.footer-nav ul li {
+    display: inline;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.windowLoop (@index) when (@index < 17) {
+    
+    (~".window:nth-child(@{index})") {
+		
+        // your resulting css
+		top: percentage((@index - 1));
+	}
+    .windowLoop(@index + 1);
+}
+
+.windowLoop(1); 
+
+.header-text {
+    left: 3%;
+    top: 75%;
+    position: relative;
+    width: 95%;
+    bottom: 3%;
+}
+
+.header-text li {
+     list-style: none;
+}  
+
+.tibet-color {
+    color: @tibetColor !important;
+}
+
+.everest-color {
+    color: #421205 !important;   
+}
+.tlv-color {
+    color: #a57606 !important;   
+}
+
+.header-text a:hover, .footer-nav a:hover {
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+     opacity:0.5;
+    filter:alpha(opacity=5);
+    text-decoration: none;
+}
+
+.section-main a {
+    color: white;  
+}
+
+.section-main-desc {
+    font-size: 16px;
+    color: gray;
+    float: right;
+    padding-top: 30px;
+    text-transform:lowercase;
+}
+
+.section-other a, .footer-nav a {
+    font-weight:700;
+    color: white;
+}
+
+.two-text {
+    left: 5%;
+    top: 5%;
+    position: relative;
+    font-size: 15px;
+    color: white;  
+    text-transform:lowercase;
+}
+
+
+/*medium size images */
+@import url("small.css") only screen and (max-width : 800px);
+
+@import url("medium.css") only screen and (min-device-width : 768px) and (max-device-width : 1024), (min-width : 800px);
+
+@import url("large.css") only screen and (min-width : 1424px);
+
+@import url("mobile.css") only screen and (min-device-width : 320px) and (max-device-width : 568px), 
+    only screen and (min-device-width : 320px) and (max-device-width : 480px);

@@ -1,0 +1,96 @@
+.window-image(@_; @url) {
+    background: url(@url) no-repeat;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.window-image(small; @url) {
+    background-attachment: fixed;
+}
+
+.window-image(medium; @url) {
+    background-attachment: fixed;
+}
+
+.window-image(large; @url) {
+    background-attachment: fixed;
+}
+
+.window-image(mobile; @url) {
+     background-attachment: none !important;
+}
+
+.createImageBackgrounds(@root) {
+
+    .bg {
+        .window-image(@root, "../img/@{root}/landscape/background.jpg");
+    }
+    
+    .one {
+        .window-image(@root, "../img/@{root}/landscape/one.jpg");
+    }
+    
+    .two {
+        .window-image(@root,"../img/@{root}/landscape/two.jpg");
+    }
+    
+    .three {
+       .window-image(@root,"../img/@{root}/landscape/three.jpg");
+    }
+    
+    .four {
+        .window-image(@root,"../img/@{root}/landscape/four.jpg");
+    }
+    
+    .five {
+        .window-image(@root,"../img/@{root}/landscape/five.jpg");
+    }
+    
+    .six {
+        .window-image(@root,"../img/@{root}/landscape/six.jpg");
+    }
+    
+    .seven {
+        .window-image(@root,"../img/@{root}/landscape/seven.jpg");
+    }
+    
+    .eight {
+        .window-image(@root,"../img/@{root}/landscape/eight.jpg");
+    }
+    
+    .ev-bg {
+        .window-image(@root,"../img/@{root}/landscape/everest/background.jpg");
+    }
+    
+    .ev-one {
+        .window-image(@root,"../img/@{root}/landscape/everest/one.jpg");
+    }
+    
+    .ev-two {
+       .window-image(@root,"../img/@{root}/landscape/everest/three.jpg");
+    }
+    
+    .ev-three {
+        .window-image(@root,"../img/@{root}/landscape/everest/two.jpg");
+    }
+    
+    .tlv-bg {
+        .window-image(@root,"../img/@{root}/landscape/tlv/background.jpg");
+    }
+    
+    .tlv-one {
+       .window-image(@root,"../img/@{root}/landscape/tlv/one.jpg");
+    }
+    
+    .tlv-two {
+        .window-image(@root,"../img/@{root}/landscape/tlv/three.jpg");
+    }
+    
+    .tlv-three {
+        .window-image(@root,"../img/@{root}/landscape/tlv/two.jpg");
+    }
+}
