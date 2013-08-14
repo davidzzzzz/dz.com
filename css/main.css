@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
 
-@import url("small.css") only screen and (max-width: 800px);
+@import url("small.css") only screen and (min-width: 0) and (max-width: 800px);
 
 @import url("medium.css") only screen and (min-device-width: 768px) and (max-device-width: 1024), (min-width: 800px);
 

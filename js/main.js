@@ -1,37 +1,45 @@
 var scrollTiming = 1500;
 var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+var mobileInit = false;
+
+$(window).resize(function() {
+    if(!$("#desktop-div").is(':visible')) {
+        enableMobileGallery();
+    }
+});
+
 
 $(document).ready(function () {
 
     if(!isMobile) {
-        $("#mobile-photo-grid").remove();
         //set up our click handlers
         $(".everest-nav").click(function (event) {
-            stopListening();
             $.scrollTo("#everest", {
-                duration: scrollTiming,
-                onAfter: resumeListening
+                duration: scrollTiming
             });
             return false;
         });
         $(".tibet-nav").click(function (event) {
-            stopListening();
             $.scrollTo("#tibet", {
-                duration: scrollTiming,
-                onAfter: resumeListening
+                duration: scrollTiming
             });
             return false;
         });
         $(".tlv-nav").click(function (event) {
-            stopListening();
             $.scrollTo("#tlv", {
-                duration: scrollTiming,
-                onAfter: resumeListening
+                 duration: scrollTiming   
             });
             return false;
         });
     } else {
-       $('.photoset-grid-basic').photosetGrid({
+       enableMobileGallery();
+    }
+});
+
+function enableMobileGallery() {
+    if(mobileInit)
+        return;
+    $('.photoset-grid-basic').photosetGrid({
            highresLinks: true, 
            gutter: '2px',
            onComplete: function(){
@@ -45,6 +53,6 @@ $(document).ready(function () {
                 });
             }   
            
-       });
-    }
-});
+    });
+    mobileInit = true;
+}
