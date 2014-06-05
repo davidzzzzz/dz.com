@@ -1,0 +1,16 @@
+{
+  "name": "davidzuckerman",
+  "version": "1.0.0",
+   "dependencies" : {
+
+   },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-copy" : "latest",
+    "grunt-contrib-clean" : "latest",
+    "grunt-contrib-less" : "latest",
+    "grunt-contrib-requirejs" : "latest",
+    "grunt-contrib-rename" : "latest"
+  }
+}

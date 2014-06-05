@@ -1,0 +1,9 @@
+###
+# Site variables
+###
+
+development: app/
+
+destination: dist/
+
+destination_assets: dist/assets/

@@ -1,0 +1,29 @@
+{
+  "name": "davidzuckerman.com",
+  "version": "1.0.0",
+  "authors": [
+    "David Zuckerman <davidztlv@gmail.com>"
+  ],
+  "description": "David Zuckerman main",
+  "main": "bower.json",
+  "license": "MIT",
+  "homepage": "davidzuckerman.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies" : {
+	  "bootstrap" : "latest",
+      "requirejs" : "latest",
+	  "jquery" : "1.10.2",
+	  "colorbox" : "1.4.33",
+	  "jquery.easing" : "1.3",
+	  "photoset-grid" : "latest",
+	  "jquery.scrollTo" : "1.4.8",
+      "font-awesome" : "4.0.3"
+  }
+}

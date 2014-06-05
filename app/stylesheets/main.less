@@ -1,6 +1,3 @@
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
 
 @tibetColor: #051f80;
@@ -54,14 +51,11 @@ body {
     padding-right: 5px;
 }
 
-.windowLoop (@index) when (@index < 17) {
-    
-    (~".window:nth-child(@{index})") {
-		
-        // your resulting css
-		top: percentage((@index - 1));
-	}
-    .windowLoop(@index + 1);
+.windowLoop(@index) when (@index < 17) {
+  .window:nth-child(@{index}) {
+    top: percentage((@index - 1));
+  }
+  .windowLoop(@index + 1);
 }
 
 .windowLoop(1); 
