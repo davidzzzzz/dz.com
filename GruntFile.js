@@ -59,22 +59,60 @@ module.exports = function(grunt) {
                    {
                        expand: true,
                        cwd: '<%= site.development %>',
-                       src: ['*.html, ,.ico, .htaccess, .php'],
+                       src: ['*.{html,ico,php}'],
+                       dest: '<%= site.destination %>',
+                       filter: 'isFile'
+                   },
+                   {
+                       expand: true,
+                       cwd: '<%= site.development %>',
+                       src: ['.htaccess'],
                        dest: '<%= site.destination %>',
                        filter: 'isFile'
                    }
                ]
            },
-           less : {
-               files : [
+           deploy : {
+               files: [
                    {
                        expand: true,
-                       filter: 'isFile',
-                       src: ['<%= site.development %>bower_components/flexslider/flexslider.css'],
-                       dest: '<%= site.development %>bower_components/flexslider/',
-                       rename: function(dest, src) {
-                           return dest + "flexslider.less";
-                       }
+                       cwd: '<%= site.destination_assets %>',
+                       src: ['**/*.*'],
+                       dest: '<%= site.deploy_assets %>',
+                       filter: 'isFile'
+                   },
+                   {
+                       expand: true,
+                       cwd: '<%= site.destination %>',
+                       src: ['*.{html,ico,php}'],
+                       dest: '<%= site.deploy_site %>',
+                       filter: 'isFile'
+                   },
+                   {
+                       expand: true,
+                       cwd: '<%= site.destination %>',
+                       src: ['*.{html,ico}'],
+                       dest: '<%= site.deploy_site %>',
+                       filter: 'isFile'
+                   },
+                   {
+                       expand: true,
+                       cwd: '<%= site.server %>',
+                       src: ['*.js'],
+                       dest: '<%= site.deploy_server %>',
+                       filter: 'isFile'
+                   },
+                   {
+                       expand: true,
+                       src: ['package.json'],
+                       dest: '<%= site.deploy_server_assets %>',
+                       filter: 'isFile'
+                   },
+                   {
+                       expand: true,
+                       src: ['Procfile'],
+                       dest: '<%= site.deploy_server_assets %>',
+                       filter: 'isFile'
                    }
                ]
            }
@@ -97,7 +135,13 @@ module.exports = function(grunt) {
         // Before generating any new files,
         // remove any previously-created files.
         clean: {
-            all: ['<%= site.destination %>/**/*.*']
+            all: ['<%= site.destination %>/**/*.*'],
+            deploy: {
+                src: ['<%= site.deploy %>/**/*.*'],
+                options : {
+                    force : true
+                }
+            }
         }
     });
 
@@ -111,5 +155,8 @@ module.exports = function(grunt) {
 
 
     // Default task to be run.
-    grunt.registerTask('build', ['clean:all','copy:less', 'less:development', 'copy:main', 'requirejs']);
+    grunt.registerTask('build', ['clean:all', 'less:development', 'copy:main', 'requirejs']);
+
+    grunt.registerTask('deploy', ['build', 'clean:deploy', 'copy:deploy']);
+
 };

@@ -1,8 +1,10 @@
 {
   "name": "davidzuckerman",
   "version": "1.0.0",
+   "main": "server/web.js",
    "dependencies" : {
-
+       "express" : "latest",
+       "node-static" : "latest"
    },
   "devDependencies": {
     "grunt": "latest",
@@ -12,5 +14,8 @@
     "grunt-contrib-less" : "latest",
     "grunt-contrib-requirejs" : "latest",
     "grunt-contrib-rename" : "latest"
-  }
+  },
+    "engines": {
+        "node": "0.10.x"
+    }
 }
