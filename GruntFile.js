@@ -123,7 +123,7 @@ module.exports = function(grunt) {
                 mainConfigFile : "<%= site.destination_assets %>/javascripts/require.config.js",
                 include : ["requireLib"],
                 optimizeCss: "none",
-                optimize: "uglify2"
+                optimize: "none"//"uglify2"
         	},
             index: {
                 options: {

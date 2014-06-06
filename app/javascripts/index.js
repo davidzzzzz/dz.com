@@ -1,4 +1,4 @@
-define(['jquery', 'scrollTo', 'bootstrap', 'easing', 'photoSet', 'colorbox'], function ($) {
+require(['jquery', 'scrollTo', 'bootstrap', 'easing', 'photoSet', 'colorbox'], function ($) {
     var scrollTiming = 1500;
     var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
     var mobileInit = false;
