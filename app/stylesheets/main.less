@@ -1,5 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Josefin+Sans:400,700);
-@import "bootstrap/less/bootstrap";
+@import "../../node_modules/bootstrap/less/variables";
+@import "../../node_modules/bootstrap/less/mixins/responsive-visibility";
+@import "../../node_modules/bootstrap/less/responsive-utilities";
 
 @tibetColor: #051f80;
 
@@ -37,21 +39,28 @@ body {
     font-size: 17px;
     color: white;    
     float: left;
+    padding-top: 5px;
 }
 
 .footer-nav {
     float: right;
-}
 
-.footer-nav ul {
-    list-style-type: none;
+    ul {
+        margin-top: 5px;
+        list-style-type: none;
 
-}
+        li {
+            display: inline;
+            padding-left: 5px;
+            padding-right: 5px;
 
-.footer-nav ul li {
-    display: inline;
-    padding-left: 5px;
-    padding-right: 5px;
+            a {
+                font-weight: 700;
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 .windowLoop(@index) when (@index < 17) {
@@ -96,23 +105,26 @@ body {
     text-decoration: none;
 }
 
-.section-main a {
-    color: white;
-    text-decoration: none;
-}
+section {
+    .desc {
+        font-size: 18px;
+        color: gray;
+        float: right;
+        padding-top: 22px;
+        text-transform:lowercase;
+    }
 
-.section-main-desc {
-    font-size: 16px;
-    color: gray;
-    float: right;
-    padding-top: 30px;
-    text-transform:lowercase;
-}
+    a {
+        color: white;
+        text-decoration: none;
+    }
 
-.section-other a, .footer-nav a {
-    font-weight:700;
-    color: white;
-    text-decoration: none;
+    .main {
+        a {
+            font-weight:700;
+            font-size: 22px;
+        }
+    }
 }
 
 .two-text {

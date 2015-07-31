@@ -1,3 +1,5 @@
 .idea
 dist
 public
+node_modules
+npm-debug.log

@@ -1,21 +1,40 @@
 {
   "name": "davidzuckerman",
   "version": "1.0.0",
-   "main": "server/web.js",
-   "dependencies" : {
-       "express" : "latest",
-       "node-static" : "latest"
-   },
-  "devDependencies": {
-    "grunt": "latest",
-    "grunt-contrib-uglify": "~0.2.2",
-    "grunt-contrib-copy" : "latest",
-    "grunt-contrib-clean" : "latest",
-    "grunt-contrib-less" : "latest",
-    "grunt-contrib-requirejs" : "latest",
-    "grunt-contrib-rename" : "latest"
+  "main": "server/web.js",
+  "dependencies": {
+    "express" : "4.10.4"
   },
-    "engines": {
-        "node": "0.10.x"
-    }
+  "devDependencies": {
+    "jquery": "1.11.3",
+    "jquery-colorbox": "1.6.3",
+    "jquery.easing": "1.3.2",
+    "jquery.scrollto": "2.1.1",
+    "wixmedia" : "1.11.0",
+    "less": "^2.5.1",
+    "photoset-grid": "git://github.com/stylehatch/photoset-grid.git#v1.0.1",
+    "webpack": "^1.10.5",
+    "bootstrap" : "3.3.5"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "scripts" : {
+    "init-dist" : "mkdir -p ./dist && mkdir -p ./dist/stylesheets && mkdir -p ./dist/javascript",
+    "clean-dist" : "rm -R ./dist",
+    "init" : "npm run clean-dist && npm run init-dist",
+    "less-l" : "lessc ./app/stylesheets/large.less > ./dist/stylesheets/large.css",
+    "less-m" : "lessc ./app/stylesheets/medium.less > ./dist/stylesheets/medium.css",
+    "less-s" : "lessc ./app/stylesheets/small.less > ./dist/stylesheets/small.css",
+    "less-mb" : "lessc ./app/stylesheets/mobile.less > ./dist/stylesheets/mobile.css",
+    "less-main" : "lessc ./app/stylesheets/main.less > ./dist/stylesheets/main.css",
+    "less" : "npm run less-l && npm run less-m && npm run less-s && npm run less-mb && npm run less-main",
+    "webpack" : "webpack",
+    "html" : "cp ./app/index.html ./dist/index.html",
+    "favicon" : "cp ./app/favicon.ico ./dist/favicon.ico",
+    "copy" : "npm run html && npm run favicon",
+    "build" : "npm run init && npm run less && npm run webpack && npm run copy",
+    "start": "node server/web.js",
+    "serve": "npm run build && node server/web.js"
+  }
 }

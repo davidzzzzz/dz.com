@@ -1,3 +1,5 @@
+@prefix: "http://media.wixapps.net/wix-99108486-2a7c-4ddb-9598-39db88cf5752/images/";
+
 .window-image(@_; @url) {
     background: url(@url) no-repeat;
     background-repeat: no-repeat;
@@ -6,7 +8,6 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 .window-image(small; @url) {
@@ -25,73 +26,73 @@
      background-attachment: none !important;
 }
 
-.createImageBackgrounds(@root) {
+.createImageBackgrounds(@root, @w, @h) {
 
     .bg {
-        .window-image(@root, "../images/@{root}/landscape/background.jpg");
+        .window-image(@root, "@{prefix}d3f73926f4e54560bf04a296fe08f80c/v1/fill/w_@{w},h_@{h},al_c,q_100/background.jpg");
     }
-    
+
     .one {
-        .window-image(@root, "../images/@{root}/landscape/one.jpg");
+        .window-image(@root, "@{prefix}38898a957ef2410cb32dc6c62456f563/v1/fill/w_@{w},h_@{h},al_c,q_100/one.jpg");
     }
     
     .two {
-        .window-image(@root,"../images/@{root}/landscape/two.jpg");
+        .window-image(@root, "@{prefix}fa2a4a14f91342079f804e094f28299a/v1/fill/w_@{w},h_@{h},al_c,q_100/two.jpg");
     }
     
     .three {
-       .window-image(@root,"../images/@{root}/landscape/three.jpg");
+       .window-image(@root, "@{prefix}d6116b016f2a46189c92fcfeeff006c5/v1/fill/w_@{w},h_@{h},al_c,q_100/three.jpg");
     }
     
     .four {
-        .window-image(@root,"../images/@{root}/landscape/four.jpg");
+        .window-image(@root, "@{prefix}e9b410136aba4731bd783a58d2e6b9a6/v1/fill/w_@{w},h_@{h},al_c,q_100/four.jpg");
     }
     
     .five {
-        .window-image(@root,"../images/@{root}/landscape/five.jpg");
+        .window-image(@root, "@{prefix}58af478c2fbe425bb6725f1a5af19644/v1/fill/w_@{w},h_@{h},al_c,q_100/five.jpg");
     }
     
     .six {
-        .window-image(@root,"../images/@{root}/landscape/six.jpg");
+        .window-image(@root, "@{prefix}c8bcab8f81f5400fbc5081f7aafb22ab/v1/fill/w_@{w},h_@{h},al_c,q_100/six.jpg");
     }
     
     .seven {
-        .window-image(@root,"../images/@{root}/landscape/seven.jpg");
+        .window-image(@root, "@{prefix}7dcb67d71eef4f2aa8983f2ae77027d2/v1/fill/w_@{w},h_@{h},al_c,q_100/seven.jpg");
     }
     
     .eight {
-        .window-image(@root,"../images/@{root}/landscape/eight.jpg");
+        .window-image(@root, "@{prefix}7da83df3b12448fea01bc206b691e23f/v1/fill/w_@{w},h_@{h},al_c,q_100/eight.jpg");
     }
     
     .ev-bg {
-        .window-image(@root,"../images/@{root}/landscape/everest/background.jpg");
+        .window-image(@root, "@{prefix}cc03614d225b4d3989bf704333672fdf/v1/fill/w_@{w},h_@{h},al_c,q_100/ev-bg.jpg");
     }
     
     .ev-one {
-        .window-image(@root,"../images/@{root}/landscape/everest/one.jpg");
+        .window-image(@root, "@{prefix}35b3117e916c4c30adb7f13b9fa12088/v1/fill/w_@{w},h_@{h},al_c,q_100/ev_one.jpg");
     }
-    
+
     .ev-two {
-       .window-image(@root,"../images/@{root}/landscape/everest/three.jpg");
+       .window-image(@root, "@{prefix}8c0f5284d3de448c8bc23aedd4760f77/v1/fill/w_@{w},h_@{h},al_c,q_100/ev_two.jpg");
     }
     
     .ev-three {
-        .window-image(@root,"../images/@{root}/landscape/everest/two.jpg");
+        .window-image(@root, "@{prefix}e3f1c42dff664f18b4cce77471657ed5/v1/fill/w_@{w},h_@{h},al_c,q_100/ev-three.jpg");
     }
     
     .tlv-bg {
-        .window-image(@root,"../images/@{root}/landscape/tlv/background.jpg");
+        .window-image(@root, "@{prefix}cdd543788acf444e954bf11ac0c738f7/v1/fill/w_@{w},h_@{h},al_c,q_100/tlv-bg.jpg");
     }
     
     .tlv-one {
-       .window-image(@root,"../images/@{root}/landscape/tlv/one.jpg");
+       .window-image(@root, "@{prefix}22fef8e6c06d4deab3c76c689bddede5/v1/fill/w_@{w},h_@{h},al_c,q_100/tlv-one.jpg");
     }
     
     .tlv-two {
-        .window-image(@root,"../images/@{root}/landscape/tlv/three.jpg");
+        .window-image(@root, "@{prefix}44f1f1155b3249fb929b3fc53f279ddd/v1/fill/w_@{w},h_@{h},al_c,q_100/tlv-three.jpg");
     }
     
     .tlv-three {
-        .window-image(@root,"../images/@{root}/landscape/tlv/two.jpg");
+        .window-image(@root, "@{prefix}0fa6a25ef86c4e618cb5d3489ca59307/v1/fill/w_@{w},h_@{h},al_c,q_100/tlv-two.jpg");
     }
 }
