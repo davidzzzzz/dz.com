@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/stylesheets/main.css"/>
     <link rel="author" href="https://plus.google.com/u/1/113809038969955212832/">
     <meta property="og:title" content="travel photography by david zuckerman"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -19,20 +20,38 @@
 </head>
 <body>
 <div class="hidden-sm hidden-xs">
-    <section id="tibet" class="window bg">
-        <div class="header-text ">
+    <nav class="fixed-nav">
+        <ul>
+            <li class="main">
+                <a href="#" class="tibet-nav">Tibet</a>
+            </li>
+            <li class="other">
+                <a href="#" class="everest-nav">Everest</a>
+            </li>
+            <li class="other">
+                <a href="#" class="tlv-nav">TLV</a>
+            </li>
+        </ul>
+        <div class="more-info">
             <ul>
-                <li class="main">
-                    <a href="#" class="tibet-nav">Tibet</a><span class="desc">31.7056° N, 86.9403° E</span>
+                <li>
+                    <a href="https://www.facebook.com/davidzuckerman" target="_blank">
+                        <i class="fa fa-facebook-square"></i>
+                    </a>
                 </li>
-                <li class="other">
-                    <a href="#" class="everest-nav">Everest</a>
+                <li>
+                    <a href="https://www.facebook.com/davidzuckerman" target="_blank">
+                        <i class="fa fa-twitter-square"></i>
+                    </a>
                 </li>
-                <li class="other">
-                    <a href="#" class="tlv-nav">TLV</a>
+                <li>
+                    &copy; david zuckerman 2015
                 </li>
             </ul>
         </div>
+    </nav>
+    <section id="tibet" class="window bg">
+        <span class="desc">31.7056° N, 86.9403° E</span>
     </section>
 
     <section id="one" class="window one">
@@ -48,20 +67,7 @@
     <section id="six" class="window eight">
     </section>
     <section class="window ev-bg" id="everest">
-        <div class="header-text ">
-            <ul>
-                <li class="other">
-                    <a href="#" class="tibet-nav">Tibet</a>
-                </li>
-                <li class="main">
-                    <a href="#" class="everest-nav">Everest</a><span
-                        class="desc">27.9881° N, 86.9253° E</span>
-                </li>
-                <li class="other">
-                    <a href="#" class="tlv-nav">TLV</a>
-                </li>
-            </ul>
-        </div>
+        <span class="desc">27.9881° N, 86.9253° E</span>
     </section>
     <section class="window ev-one" id="ev-one">
     </section>
@@ -70,52 +76,13 @@
     <section class="window ev-three" id="ev-three">
     </section>
     <section class="window tlv-bg" id="tlv">
-        <div class="header-text ">
-            <ul>
-                <li class="other">
-                    <a href="#" class="tibet-nav">Tibet</a>
-                </li>
-                <li class="other">
-                    <a href="#" class="everest-nav">Everest</a>
-                </li>
-                <li class="main">
-                    <a href="#" class="tlv-nav">TLV</a><span class="desc">32.0833° N, 34.8000° E</span>
-                </li>
-            </ul>
-        </div>
+        <span class="desc">32.0833° N, 34.8000° E</span>
     </section>
     <section class="window tlv-one" id="tlv-one">
     </section>
     <section class="window tlv-two" id="tlv-two">
     </section>
     <section class="window tlv-three" id="tlv-three">
-    </section>
-    <section class="window footer tlv-color">
-        <div class="my-name">&copy; david zuckerman 2015</div>
-        <div class="footer-nav">
-            <ul>
-                <li>
-                    <a href="#" class="tibet-nav">Tibet</a>
-                </li>
-                <li>
-                    <a href="#" class="everest-nav">Everest</a>
-                </li>
-                <li>
-                    <a href="#" class="tlv-nav">TLV</a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/davidzuckerman" target="_blank"><i class="icon-facebook-sign"></i></a>
-                </li>
-                <li>
-                    <a href="http://www.flickr.com/photos/sfdavidz/" target="_blank"><i class="icon-flickr"></i></a>
-                </li>
-                <li>
-                    <a href="https://plus.google.com/u/1/113809038969955212832/" target="_blank"><i
-                            class="icon-google-plus-sign"></i></a>
-                </li>
-            </ul>
-
-        </div>
     </section>
 </div>
 <div class="visible-sm visible-xs" id="mobile-photo-grid">
@@ -144,10 +111,7 @@
             </div>
             <div class="col-4">
                 <div class="pull-right">
-                    <a href="https://www.facebook.com/davidzuckerman" target="_blank" class="icon-buttons"><i
-                            class="icon-facebook-sign"></i></a>
-                    <a href="http://www.flickr.com/photos/sfdavidz/" target="_blank" class="icon-buttons"><i
-                            class="icon-flickr"></i></a>
+                    <a href="https://www.facebook.com/davidzuckerman" target="_blank" class="icon-buttons"></a>
                 </div>
             </div>
         </div>

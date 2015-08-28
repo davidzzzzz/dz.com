@@ -1,5 +1,6 @@
 var $ = require('jquery');
 require('jquery.scrollto');
+require('waypoints/lib/noframework.waypoints');
 require('jquery.easing');
 require('photoset-grid/jquery.photoset-grid');
 require('jquery-colorbox');
@@ -19,23 +20,33 @@ $(document).ready(function () {
 
     if (!isMobile) {
         //set up our click handlers
-        $(".everest-nav").click(function (event) {
+        $(".everest-nav").click(function () {
             $.scrollTo("#everest", {
                 duration: scrollTiming
             });
             return false;
         });
-        $(".tibet-nav").click(function (event) {
+        $(".tibet-nav").click(function () {
             $.scrollTo("#tibet", {
                 duration: scrollTiming
             });
             return false;
         });
-        $(".tlv-nav").click(function (event) {
+        $(".tlv-nav").click(function () {
             $.scrollTo("#tlv", {
                 duration: scrollTiming
             });
             return false;
+        });
+
+        var waypoint = new Waypoint({
+            element: document.querySelector('.fixed-nav'),
+            handler: function() {
+                $('.fixed-nav').addClass('stuck');
+            },
+            offset: function() {
+                return 0;
+            }
         });
     } else {
         enableMobileGallery();
