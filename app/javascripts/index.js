@@ -39,7 +39,7 @@ $(document).ready(function () {
             return false;
         });
 
-        var waypoint = new Waypoint({
+        new Waypoint({
             element: document.querySelector('.fixed-nav'),
             handler: function() {
                 $('.fixed-nav').addClass('stuck');
@@ -48,10 +48,33 @@ $(document).ready(function () {
                 return 0;
             }
         });
+
+        addNavWaypoint('#tibet', 'tibet', null);
+        addNavWaypoint('#tlv', 'tlv', 'everest');
+        addNavWaypoint('#everest', 'everest', 'tibet');
+
     } else {
         enableMobileGallery();
     }
 });
+
+function addNavWaypoint(selector, value, prev) {
+    new Waypoint({
+        element: document.querySelector(selector),
+        handler: function(direction) {
+            $('li.main').removeClass('main');
+            if(direction === 'up' && prev) {
+                $('[data-section="' + prev + '"]').addClass('main');
+            } else {
+                $('[data-section="' + value + '"]').addClass('main');
+            }
+
+        },
+        offset: function() {
+            return 0;
+        }
+    });
+}
 
 function enableMobileGallery() {
     if (mobileInit)
